@@ -325,28 +325,28 @@ export function NumberDecomposer() {
 
         {/* Card Sections - Grid layout for mobile */}
         <div className={cn(
-          "mb-8 grid gap-3 md:gap-4",
+          "mb-8 grid gap-2 md:gap-4",
           requiredPlaces.length === 2 && "grid-cols-2",
           requiredPlaces.length === 3 && "grid-cols-3",
-          requiredPlaces.length === 4 && "grid-cols-2 md:grid-cols-4"
+          requiredPlaces.length === 4 && "grid-cols-4"
         )}>
           {requiredPlaces.map((place) => (
-            <div key={place} className="rounded-2xl bg-white p-3 md:p-4 shadow-lg">
+            <div key={place} className="rounded-xl bg-white p-2 md:p-4 shadow-lg">
               <h3
                 className={cn(
-                  "mb-2 md:mb-3 text-center text-lg md:text-xl font-bold",
+                  "mb-1 md:mb-3 text-center text-sm md:text-xl font-bold",
                   placeConfig[place].textColor
                 )}
               >
                 {placeConfig[place].label}
               </h3>
-              <div className="flex flex-col gap-1.5 md:gap-2">
+              <div className="flex flex-col gap-1 md:gap-2">
                 {getOptions(place).map((value) => (
                   <button
                     key={value}
                     onClick={() => handleSelect(place, value)}
                     className={cn(
-                      "w-full rounded-xl py-2 text-sm md:text-lg font-bold transition-all transform hover:scale-105 active:scale-95",
+                      "w-full rounded-lg py-1 md:py-2 text-xs md:text-lg font-bold transition-all transform hover:scale-105 active:scale-95",
                       selection[place] === value
                         ? cn("text-gray-800", placeConfig[place].selectedColor)
                         : cn("text-white", placeConfig[place].color, placeConfig[place].hoverColor)
