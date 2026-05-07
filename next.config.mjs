@@ -9,8 +9,8 @@ const nextConfig = {
   },
   // Cambia esto por el nombre de tu repositorio en GitHub
   // Por ejemplo, si tu repo es: github.com/tu-usuario/descomponer-numeros
-  // basePath: '/descomponer-numeros',
-  // assetPrefix: '/descomponer-numeros/',
+  basePath: '/descomponer_numeros',
+  assetPrefix: '/descomponer_numeros/',
 }
 
 export default nextConfig
